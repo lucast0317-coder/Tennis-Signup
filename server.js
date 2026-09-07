@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const titleElement = document.querySelector('h1') || document.querySelector('header');
+  if (titleElement) {
+    titleElement.innerHTML = `<a href="https://your-new-link-here.com" style="color: inherit; text-decoration: none;">Luba Tennis Software</a>`;
+  }
+});
+
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
