@@ -85,7 +85,7 @@ app.delete('/api/signups', (req, res) => {
   });
 });
 
-// Root route - serve frontend
+// Root route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

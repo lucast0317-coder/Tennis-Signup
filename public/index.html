@@ -40,6 +40,7 @@
       justify-content: center;
       min-height: 100vh;
       position: relative;
+      transition: background-image 1s ease-in-out;
     }
 
     body::before {
@@ -283,7 +284,7 @@
       background-color: var(--primary);
       color: white;
       border: none;
-      border-radius: 0px;
+      border-radius: 8px;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
@@ -402,89 +403,118 @@
       font-style: italic;
     }
 
-    .admin-indicator {
-      display: none;
-      background: #fef2f2;
-      border: 1px solid #fca5a5;
-      color: #991b1b;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .inconspicuous-internal-line {
-      font-size: 0.725rem;
-      color: #30363d;
-      letter-spacing: 0.5px;
-      cursor: pointer;
-      user-select: none;
-      margin-top: 0.75rem;
-    }
-
     .modal-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(5, 10, 15, 0.95);
-      backdrop-filter: blur(8px);
+      background: rgba(10, 12, 24, 0.85);
+      backdrop-filter: blur(12px);
       display: none;
       justify-content: center;
       align-items: center;
       z-index: 9999;
     }
 
-    .cookie-popup-card {
-      background: #ffffff;
-      border-radius: 16px;
+    /* --- GEMINI THEME FIRST-TIME JOIN CARD --- */
+    .gemini-card {
+      background: linear-gradient(135deg, rgba(18, 22, 41, 0.95), rgba(30, 27, 75, 0.95));
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      border-radius: 20px;
       width: 90%;
-      max-width: 520px;
-      padding: 2.25rem 2rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      border: 3px solid var(--primary);
+      max-width: 480px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 20px 60px rgba(79, 70, 229, 0.35), 0 0 30px rgba(168, 85, 247, 0.2);
       text-align: center;
+      color: #f8fafc;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cookie-input {
+    .gemini-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, rgba(59, 130, 246, 0.15) 40%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .gemini-card h2 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a855f7, #60a5fa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    .gemini-card p {
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .gemini-input {
       width: 100%;
       padding: 0.85rem 1rem;
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      font-size: 1.1rem;
-      margin-bottom: 1.25rem;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(168, 85, 247, 0.5);
+      border-radius: 10px;
+      font-size: 1rem;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
       text-align: center;
       outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .cookie-action-group {
+    .gemini-input:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+    }
+
+    .gemini-action-group {
       display: flex;
-      gap: 0.75rem;
+      gap: 0.85rem;
       justify-content: center;
     }
 
-    .btn-large {
-      padding: 0.85rem 1.5rem;
-      font-size: 1.1rem;
+    .gemini-btn {
+      padding: 0.85rem 1.25rem;
+      font-size: 1rem;
       font-weight: 700;
-      border-radius: 8px;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
       flex: 1;
+      transition: all 0.2s ease;
     }
 
-    .btn-accept {
-      background: var(--primary);
+    .gemini-btn-primary {
+      background: linear-gradient(135deg, #6366f1, #9333ea);
       color: #ffffff;
+      box-shadow: 0 4px 15px rgba(147, 51, 234, 0.4);
     }
 
-    .btn-decline {
-      background: #e2e8f0;
-      color: var(--text-muted);
+    .gemini-btn-primary:hover {
+      background: linear-gradient(135deg, #4f46e5, #7e22ce);
+      transform: translateY(-1px);
+    }
+
+    .gemini-btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .gemini-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
     }
   </style>
 </head>
@@ -496,12 +526,7 @@
 </div>
 
 <div class="container">
-  <div class="admin-indicator" id="admin-indicator">
-    <span id="admin-indicator-label">[ROOT ADMIN ACCESS ACTIVE]</span>
-    <span id="exit-admin" style="cursor:pointer; text-decoration:underline;">Exit Terminal</span>
-  </div>
-
-  <h1 id="page-title">Luba Tennis Software. Want to know if someone can play at a certain time? This is the website to do that!</h1>
+  <h1 id="page-title">Luba Tennis Software</h1>
   <p class="subtitle" id="page-subtitle">Select a date, click & drag multiple time slots</p>
 
   <div class="form-card">
@@ -523,7 +548,7 @@
       <div class="form-group">
         <label>
           Select Time Slots 
-          <span class="drag-instruction" id="drag-instruction-text">(Click and drag down to select multiple)</span>
+          <span class="drag-instruction" id="drag-instruction-text">(Click to select slots)</span>
         </label>
         
         <div class="slots-and-action-layout">
@@ -540,13 +565,13 @@
 </div>
 
 <div class="modal-overlay" id="registration-modal">
-  <div class="cookie-popup-card">
-    <h2>Join & Sign In</h2>
-    <p>Enter your full name below to sign up for slots.</p>
-    <input type="text" id="register-name-input" class="cookie-input" placeholder="Enter your name..." autocomplete="off">
-    <div class="cookie-action-group">
-      <button type="button" class="btn-large btn-accept" id="accept-cookies-btn">Sign In</button>
-      <button type="button" class="btn-large btn-decline" id="decline-cookies-btn">Cancel</button>
+  <div class="gemini-card">
+    <h2>Welcome to Luba Tennis</h2>
+    <p>Enter your full name to get started and reserve court time slots.</p>
+    <input type="text" id="register-name-input" class="gemini-input" placeholder="Enter your name..." autocomplete="off">
+    <div class="gemini-action-group">
+      <button type="button" class="gemini-btn gemini-btn-primary" id="accept-cookies-btn">Join & Sign In</button>
+      <button type="button" class="gemini-btn gemini-btn-secondary" id="decline-cookies-btn">Cancel</button>
     </div>
   </div>
 </div>
@@ -556,6 +581,19 @@
   var activeUser = null;
   var selectedSlots = new Set();
   var cachedServerData = {};
+  var bgIndex = 0;
+
+  var tennisBackgrounds = [
+    "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=1920&q=80",
+    "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1920&q=80",
+    "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1920&q=80",
+    "https://images.unsplash.com/photo-1530915534664-4ac6423ca938?auto=format&fit=crop&w=1920&q=80"
+  ];
+
+  function rotateBackground() {
+    document.body.style.backgroundImage = 'url("' + tennisBackgrounds[bgIndex] + '")';
+    bgIndex = (bgIndex + 1) % tennisBackgrounds.length;
+  }
 
   function setActiveUser(name) {
     activeUser = name;
@@ -632,6 +670,9 @@
   var selectedDateKey = availableDates[0].key;
 
   async function init() {
+    rotateBackground();
+    setInterval(rotateBackground, 8000); // Rotates background every 8 seconds
+
     updateCalgaryClock();
     setInterval(updateCalgaryClock, 1000);
 
@@ -734,7 +775,6 @@
           return;
         }
 
-        // Handle remove button click
         if (e.target.classList.contains('remove-btn')) {
           e.stopPropagation();
           removeSignup(selectedDateKey, slot);
@@ -841,5 +881,4 @@
 })();
 </script>
 </body>
-</html>
 </html>
