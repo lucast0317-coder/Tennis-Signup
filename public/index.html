@@ -301,10 +301,6 @@
       transform: translateY(-1px);
     }
 
-    button.submit-btn:active {
-      transform: translateY(0);
-    }
-
     button.submit-btn:disabled {
       background-color: #94a3b8;
       cursor: not-allowed;
@@ -349,12 +345,6 @@
     .slot-card.drag-selected {
       background: #dbeafe !important;
       border-color: var(--selected-slot) !important;
-    }
-
-    .slot-card.is-full {
-      opacity: 0.6;
-      cursor: not-allowed;
-      background: #f1f5f9;
     }
 
     .slot-header {
@@ -404,11 +394,6 @@
       line-height: 1;
       padding: 0 0.15rem;
       border-radius: 50%;
-      transition: background 0.15s;
-    }
-
-    .name-badge .remove-btn:hover {
-      background: #fee2e2;
     }
 
     .empty-msg {
@@ -431,17 +416,6 @@
       align-items: center;
     }
 
-    .admin-indicator.ultra-theme {
-      background: #2e1065;
-      border-color: #a855f7;
-      color: #f0abfc;
-    }
-
-    .admin-indicator span {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-
     .inconspicuous-internal-line {
       font-size: 0.725rem;
       color: #30363d;
@@ -449,126 +423,6 @@
       cursor: pointer;
       user-select: none;
       margin-top: 0.75rem;
-      transition: color 0.2s;
-    }
-
-    .inconspicuous-internal-line:hover {
-      color: #8b949e;
-    }
-
-    .cookie-popup-card {
-      background: #ffffff;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 520px;
-      padding: 2.25rem 2rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-      border: 3px solid var(--primary);
-      text-align: center;
-      animation: modalPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @keyframes modalPop {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    .cookie-popup-card h2 {
-      font-size: 1.8rem;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-      font-weight: 800;
-    }
-
-    .cookie-popup-card p {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      margin-bottom: 1.25rem;
-      line-height: 1.5;
-    }
-
-    .cookie-input {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border: 2px solid var(--border);
-      border-radius: 8px;
-      font-size: 1.1rem;
-      margin-bottom: 1.25rem;
-      outline: none;
-      text-align: center;
-      transition: border-color 0.2s;
-    }
-
-    .cookie-input:focus {
-      border-color: var(--primary);
-    }
-
-    .cookie-action-group {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-    }
-
-    .btn-large {
-      padding: 0.85rem 1.5rem;
-      font-size: 1.1rem;
-      font-weight: 700;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      flex: 1;
-    }
-
-    .btn-accept {
-      background: var(--primary);
-      color: #ffffff;
-    }
-
-    .btn-accept:hover {
-      background: var(--primary-hover);
-    }
-
-    .btn-decline {
-      background: #e2e8f0;
-      color: var(--text-muted);
-    }
-
-    .btn-decline:hover {
-      background: #cbd5e1;
-      color: var(--text);
-    }
-
-    @media (max-width: 600px) {
-      .slots-and-action-layout {
-        flex-direction: column;
-      }
-      .action-column {
-        width: 100%;
-        padding-left: 0;
-      }
-      button.submit-btn {
-        width: 100%;
-        height: auto;
-        padding: 0.875rem;
-        border-radius: 0px;
-      }
-      .calgary-clock-widget {
-        top: 0.5rem;
-        right: 0.5rem;
-        padding: 0.35rem 0.6rem;
-      }
-      .clock-time {
-        font-size: 0.9rem;
-      }
-      .user-profile-bar {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
-      }
-      .cookie-action-group {
-        flex-direction: column;
-      }
     }
 
     .modal-overlay {
@@ -585,198 +439,52 @@
       z-index: 9999;
     }
 
-    .hacker-window {
-      background: #0d1117;
-      border: 2px solid #00ff66;
-      border-radius: 8px;
+    .cookie-popup-card {
+      background: #ffffff;
+      border-radius: 16px;
       width: 90%;
-      max-width: 700px;
-      box-shadow: 0 0 25px rgba(0, 255, 102, 0.25), inset 0 0 15px rgba(0, 255, 102, 0.05);
-      font-family: 'Courier New', Courier, monospace;
-      color: #00ff66;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      max-height: 85vh;
+      max-width: 520px;
+      padding: 2.25rem 2rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      border: 3px solid var(--primary);
+      text-align: center;
     }
 
-    .hacker-bar {
-      background: #011627;
-      border-bottom: 1px solid #00ff66;
-      padding: 0.5rem 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .hacker-title {
-      font-weight: bold;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      color: #38bdf8;
-    }
-
-    .hacker-close {
-      color: #ef4444;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .hacker-close:hover {
-      color: #ff6b6b;
-    }
-
-    .hacker-body {
-      padding: 1.25rem;
-      overflow-y: auto;
-    }
-
-    .hacker-input-group {
-      display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .hacker-input {
-      background: #161b22;
-      border: 1px solid #00ff66;
-      color: #00ff66;
-      padding: 0.6rem;
-      font-family: inherit;
-      border-radius: 4px;
+    .cookie-input {
       width: 100%;
-      font-size: 1rem;
-      text-transform: uppercase;
+      padding: 0.85rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
       outline: none;
     }
 
-    .hacker-btn {
-      background: #00ff66;
-      color: #0d1117;
+    .cookie-action-group {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+
+    .btn-large {
+      padding: 0.85rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
       border: none;
-      padding: 0.6rem 1.2rem;
-      font-family: inherit;
-      font-weight: bold;
       cursor: pointer;
-      border-radius: 4px;
-      transition: all 0.2s;
+      flex: 1;
     }
 
-    .hacker-btn:hover {
-      background: #38ef7d;
-      box-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+    .btn-accept {
+      background: var(--primary);
+      color: #ffffff;
     }
 
-    .hacker-btn-danger {
-      background: #ef4444;
-      color: #fff;
-    }
-
-    .hacker-btn-danger:hover {
-      background: #dc2626;
-      box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
-    }
-
-    .hacker-panel {
-      display: none;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .hacker-section {
-      background: #161b22;
-      border: 1px solid #30363d;
-      padding: 1rem;
-      border-radius: 6px;
-    }
-
-    .hacker-section h3 {
-      font-size: 0.9rem;
-      color: #38bdf8;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .btn-xs {
-      padding: 0.2rem 0.5rem;
-      font-size: 0.75rem;
-      border-radius: 3px;
-    }
-
-    .status-terminal {
-      font-size: 0.8rem;
-      color: #8b949e;
-      line-height: 1.4;
-    }
-
-    .ultra-window {
-      background: #0b0712;
-      border: 2px solid #a855f7;
-      box-shadow: 0 0 35px rgba(168, 85, 247, 0.4), inset 0 0 20px rgba(168, 85, 247, 0.1);
-      color: #e9d5ff;
-    }
-
-    .ultra-window .hacker-bar {
-      background: #1e1035;
-      border-bottom: 1px solid #a855f7;
-    }
-
-    .ultra-window .hacker-title {
-      color: #f0abfc;
-      text-shadow: 0 0 8px rgba(240, 171, 252, 0.6);
-    }
-
-    .ultra-window .hacker-input {
-      background: #130924;
-      border: 1px solid #a855f7;
-      color: #f0abfc;
-    }
-
-    .ultra-window .hacker-btn {
-      background: #a855f7;
-      color: #0b0712;
-    }
-
-    .ultra-window .hacker-btn:hover {
-      background: #c084fc;
-      box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
-    }
-
-    .ultra-window .hacker-section {
-      background: #150d27;
-      border: 1px solid #3b1d6e;
-    }
-
-    .ultra-window .hacker-section h3 {
-      color: #22d3ee;
-    }
-
-    .ultra-window .status-terminal {
-      color: #c084fc;
-    }
-
-    .log-box {
-      background: #07040d;
-      border: 1px solid #3b1d6e;
-      border-radius: 4px;
-      padding: 0.5rem;
-      max-height: 150px;
-      overflow-y: auto;
-      font-size: 0.75rem;
-      line-height: 1.4;
-      color: #38bdf8;
-    }
-
-    .log-entry {
-      margin-bottom: 0.25rem;
-      word-break: break-word;
-    }
-
-    .log-timestamp {
-      color: #a855f7;
-      margin-right: 0.5rem;
+    .btn-decline {
+      background: #e2e8f0;
+      color: var(--text-muted);
     }
   </style>
 </head>
@@ -790,14 +498,13 @@
 <div class="container">
   <div class="admin-indicator" id="admin-indicator">
     <span id="admin-indicator-label">[ROOT ADMIN ACCESS ACTIVE]</span>
-    <span id="exit-admin">Exit Terminal</span>
+    <span id="exit-admin" style="cursor:pointer; text-decoration:underline;">Exit Terminal</span>
   </div>
 
   <h1 id="page-title">Luba Tennis Software. Want to know if someone can play at a certain time? This is the website to do that!</h1>
-  <p class="subtitle" id="page-subtitle">Select a date, click & drag multiple time slots (Max 10 per slot)</p>
+  <p class="subtitle" id="page-subtitle">Select a date, click & drag multiple time slots</p>
 
   <div class="form-card">
-    
     <div class="user-profile-bar" id="user-profile-bar">
       <div class="user-profile-info" id="user-profile-info">
         <span class="guest-notice">Browsing in Read-Only Guest Mode</span>
@@ -834,177 +541,46 @@
 
 <div class="modal-overlay" id="registration-modal">
   <div class="cookie-popup-card">
-    <h2>Join & Accept Cookies</h2>
-    <p>Enter your full name below to sign up for slots. We will store a cookie on your device so you remain logged in on future visits.</p>
+    <h2>Join & Sign In</h2>
+    <p>Enter your full name below to sign up for slots.</p>
     <input type="text" id="register-name-input" class="cookie-input" placeholder="Enter your name..." autocomplete="off">
     <div class="cookie-action-group">
-      <button type="button" class="btn-large btn-accept" id="accept-cookies-btn">Accept & Sign In</button>
-      <button type="button" class="btn-large btn-decline" id="decline-cookies-btn">Decline (Stay Guest)</button>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="admin-modal">
-  <div class="hacker-window">
-    <div class="hacker-bar">
-      <span class="hacker-title">SYSTEM_OVERRIDE // ROOT_TERMINAL_v2.0</span>
-      <span class="hacker-close" id="close-modal">&times;</span>
-    </div>
-
-    <div class="hacker-body">
-      <div id="auth-section">
-        <p class="status-terminal">> ACCESS RESTRICTED. SECURITY CLEARANCE REQUIRED.</p>
-        <p class="status-terminal">> ENTER PASSCODE TO BYPASS ENCRYPTION:</p>
-        <div class="hacker-input-group">
-          <input type="password" id="secret-input" class="hacker-input" placeholder="PASSCODE..." autocomplete="off">
-          <button type="button" id="auth-btn" class="hacker-btn">AUTHENTICATE</button>
-        </div>
-        <p id="auth-error" style="color:#ef4444; font-size:0.8rem; margin-top:0.5rem; display:none;">> ACCESS DENIED: INVALID ENCRYPTION KEY</p>
-      </div>
-
-      <div class="hacker-panel" id="admin-panel">
-        <p class="status-terminal" style="color:#38bdf8;">> GRANTED ROOT ACCESS. STATUS: CONNECTED TO MAIN FRAME.</p>
-
-        <div class="hacker-section">
-          <h3>[ Standard System Overrides ]</h3>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button type="button" id="clear-day-btn" class="hacker-btn hacker-btn-danger" style="width:auto;">Clear Current Date</button>
-          </div>
-          <div class="inconspicuous-internal-line" id="ultra-trigger">
-            SYSTEM_DIAGNOSTICS_LOG_OK // REVISION_2.0.4
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="ultra-admin-modal">
-  <div class="hacker-window ultra-window">
-    <div class="hacker-bar">
-      <span class="hacker-title">ULTRA_ADMIN // OMNI_KERNEL_v9.9.4</span>
-      <span class="hacker-close" id="ultra-close-modal">&times;</span>
-    </div>
-
-    <div class="hacker-body">
-      <div id="ultra-auth-section">
-        <p class="status-terminal">> UNVERIFIED ULTRA-LEVEL CONNECTION DETECTED.</p>
-        <p class="status-terminal">> ENTER OMNI PASSCODE FOR KERNEL ACCESS:</p>
-        <div class="hacker-input-group">
-          <input type="password" id="ultra-secret-input" class="hacker-input" placeholder="OMNI-PASSCODE..." autocomplete="off">
-          <button type="button" id="ultra-auth-btn" class="hacker-btn">BYPASS OMNI-LOCK</button>
-        </div>
-        <p id="ultra-auth-error" style="color:#ef4444; font-size:0.8rem; margin-top:0.5rem; display:none;">> ULTRA ACCESS DENIED: INVALID KERNEL TOKEN</p>
-      </div>
-
-      <div class="hacker-panel" id="ultra-admin-panel">
-        <p class="status-terminal" style="color:#22d3ee;">> OMNI KERNEL UNLOCKED. FULL SYSTEM CONTROL ACTIVE.</p>
-
-        <div class="hacker-section">
-          <h3>[ Capacity & Slot Management ]</h3>
-          <div style="display:flex; gap:0.5rem; align-items:center;">
-            <input type="number" id="slot-capacity-input" class="hacker-input" min="1" max="50" style="width:100px; text-transform:none;" placeholder="Capacity">
-            <button type="button" id="update-capacity-btn" class="hacker-btn">Update Slot Capacity</button>
-          </div>
-        </div>
-
-        <div class="hacker-section">
-          <h3>[ Master Database Operations ]</h3>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-            <button type="button" id="ultra-reset-all-btn" class="hacker-btn hacker-btn-danger" style="width:auto;">Purge All Database Records</button>
-          </div>
-        </div>
-
-        <div class="hacker-section">
-          <h3>[ System Lock & State Control ]</h3>
-          <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
-            <button type="button" id="ultra-toggle-lock-btn" class="hacker-btn" style="width:auto; background:#f43f5e; color:#fff;">Toggle Schedule Lock</button>
-            <span id="lock-status-text" style="font-size:0.85rem; color:#f0abfc;">Status: Normal (Unlocked)</span>
-          </div>
-        </div>
-      </div>
+      <button type="button" class="btn-large btn-accept" id="accept-cookies-btn">Sign In</button>
+      <button type="button" class="btn-large btn-decline" id="decline-cookies-btn">Cancel</button>
     </div>
   </div>
 </div>
 
 <script>
 (function() {
-  var SECRET = "DILDS";
-  var ULTRA_SECRET = "ULTRADILDS";
-  var isAdminMode = false;
-  var isUltraAdminMode = false;
-  var isSystemLocked = false;
-  var pendingSlotToSelect = null;
+  var activeUser = null;
+  var selectedSlots = new Set();
+  var cachedServerData = {};
 
   function setActiveUser(name) {
-    try {
-      var expires = "";
-      var date = new Date();
-      date.setTime(date.getTime() + (365 * 24 * 60 * 60 * 1000));
-      expires = "; expires=" + date.toUTCString();
-      document.cookie = "tennis_active_player=" + encodeURIComponent(name) + expires + "; path=/; SameSite=Lax";
-    } catch(e) {}
-    
-    try {
-      localStorage.setItem('tennis_active_player', name);
-    } catch(e) {}
+    activeUser = name;
+    try { localStorage.setItem('tennis_active_player', name); } catch(e) {}
   }
 
   function getActiveUser() {
-    try {
-      var nameEQ = "tennis_active_player=";
-      var ca = document.cookie.split(';');
-      for(var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEQ) === 0) {
-          var val = decodeURIComponent(c.substring(nameEQ.length, c.length));
-          if (val && val.trim() !== '') return val.trim();
-        }
-      }
-    } catch(e) {}
-
-    try {
-      var lsUser = localStorage.getItem('tennis_active_player');
-      if (lsUser && lsUser.trim() !== '') return lsUser.trim();
-    } catch(e) {}
-
+    if (activeUser) return activeUser;
+    try { return localStorage.getItem('tennis_active_player'); } catch(e) {}
     return null;
   }
 
   function eraseActiveUser() {
-    try {
-      document.cookie = 'tennis_active_player=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    } catch(e) {}
-    try {
-      localStorage.removeItem('tennis_active_player');
-    } catch(e) {}
+    activeUser = null;
+    try { localStorage.removeItem('tennis_active_player'); } catch(e) {}
   }
-
-  var tennisPlayerBackgrounds = [
-    "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1530915534664-4ac6423ca938?auto=format&fit=crop&w=1920&q=80",
-    "https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?auto=format&fit=crop&w=1920&q=80"
-  ];
 
   function updateCalgaryClock() {
     var now = new Date();
     var timeStr = now.toLocaleTimeString('en-US', {
       timeZone: 'America/Edmonton',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true
     });
     var clockEl = document.getElementById('calgary-clock');
     if (clockEl) clockEl.textContent = timeStr;
-  }
-
-  function setRandomBackground() {
-    var randomIdx = Math.floor(Math.random() * tennisPlayerBackgrounds.length);
-    document.body.style.backgroundImage = 'url("' + tennisPlayerBackgrounds[randomIdx] + '")';
   }
 
   var weekdaySlots = [
@@ -1022,10 +598,6 @@
     "4:00 PM - 5:00 PM", "5:00 PM - 6:00 PM"
   ];
 
-  var selectedSlots = new Set();
-  var isMouseDown = false;
-  var cachedServerData = {};
-
   async function fetchServerData() {
     try {
       var res = await fetch('/api/signups');
@@ -1034,32 +606,6 @@
       }
     } catch(e) {
       console.error("Server connection issue:", e);
-    }
-  }
-
-  async function saveSlotsToServer(dateKey, slotsArray, name) {
-    try {
-      await fetch('/api/signups', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dateKey: dateKey, slots: slotsArray, name: name })
-      });
-      await fetchServerData();
-    } catch(e) {
-      alert("Could not reach the server to save your slot.");
-    }
-  }
-
-  async function removeUserFromServer(dateKey, slot, name) {
-    try {
-      await fetch('/api/signups', {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dateKey: dateKey, slot: slot, name: name })
-      });
-      await fetchServerData();
-    } catch(e) {
-      alert("Could not remove signup from server.");
     }
   }
 
@@ -1086,18 +632,15 @@
   var selectedDateKey = availableDates[0].key;
 
   async function init() {
-    setRandomBackground();
     updateCalgaryClock();
     setInterval(updateCalgaryClock, 1000);
 
     await fetchServerData();
-    
     renderUserProfileBar();
     renderCalendar();
     renderSlots();
     setupEvents();
 
-    // Auto refresh every 5 seconds to show new signups live
     setInterval(async function() {
       await fetchServerData();
       renderSlots();
@@ -1105,15 +648,15 @@
   }
 
   function renderUserProfileBar() {
-    var activeUser = getActiveUser();
+    var user = getActiveUser();
     var infoEl = document.getElementById('user-profile-info');
     var btnEl = document.getElementById('auth-action-btn');
     var submitBtn = document.getElementById('submit-btn');
     var dragText = document.getElementById('drag-instruction-text');
 
-    if (activeUser) {
-      infoEl.innerHTML = 'Logged in as: <strong>' + escapeHtml(activeUser) + '</strong>';
-      btnEl.textContent = 'Switch / Exit Account';
+    if (user) {
+      infoEl.innerHTML = 'Logged in as: <strong>' + escapeHtml(user) + '</strong>';
+      btnEl.textContent = 'Switch / Log Out';
       btnEl.className = 'profile-action-btn secondary';
       submitBtn.disabled = false;
       dragText.style.display = 'inline';
@@ -1123,48 +666,6 @@
       btnEl.className = 'profile-action-btn';
       submitBtn.disabled = true;
       dragText.style.display = 'none';
-    }
-  }
-
-  function openRegistrationModal(targetSlot) {
-    pendingSlotToSelect = targetSlot || null;
-    var modal = document.getElementById('registration-modal');
-    var input = document.getElementById('register-name-input');
-    modal.style.display = 'flex';
-    input.value = '';
-    input.focus();
-  }
-
-  function closeRegistrationModal() {
-    pendingSlotToSelect = null;
-    document.getElementById('registration-modal').style.display = 'none';
-  }
-
-  function handleRegistrationSubmit() {
-    var input = document.getElementById('register-name-input');
-    var name = input.value.trim();
-    if (name !== "") {
-      setActiveUser(name);
-
-      if (pendingSlotToSelect) {
-        selectedSlots.add(pendingSlotToSelect);
-      }
-
-      closeRegistrationModal();
-      renderUserProfileBar();
-      renderSlots();
-    } else {
-      alert("Please enter a valid name.");
-    }
-  }
-
-  function logoutUser() {
-    var active = getActiveUser();
-    if (confirm("Log out as '" + active + "'? Your bookings will stay on the schedule.")) {
-      eraseActiveUser();
-      selectedSlots.clear();
-      renderUserProfileBar();
-      renderSlots();
     }
   }
 
@@ -1197,321 +698,148 @@
     var containerEl = document.getElementById('slots-container');
     containerEl.innerHTML = '';
 
-    var activeUser = getActiveUser();
-    var isGuest = !activeUser && !isAdminMode && !isUltraAdminMode;
-
-    var maxCap = 10;
     var activeDateObj = availableDates.find(function(d) { return d.key === selectedDateKey; });
-    var activeSlots = activeDateObj.isWeekend ? weekendSlots : weekdaySlots;
-    var dayData = cachedServerData[selectedDateKey] || {};
+    var slotsList = activeDateObj.isWeekend ? weekendSlots : weekdaySlots;
+    var daySignups = cachedServerData[selectedDateKey] || {};
 
-    activeSlots.forEach(function(slot) {
-      var users = dayData[slot] || [];
-      var isFull = users.length >= maxCap;
-      var hasSignups = users.length > 0;
+    slotsList.forEach(function(slot) {
+      var slotData = daySignups[slot] || [];
+      var card = document.createElement('div');
+      var hasSignups = slotData.length > 0;
+      var isSelected = selectedSlots.has(slot);
 
-      var slotCard = document.createElement('div');
-      slotCard.className = 'slot-card' + 
-                            (isFull ? ' is-full' : '') + 
-                            (hasSignups ? ' has-signups' : '') + 
-                            (selectedSlots.has(slot) ? ' drag-selected' : '');
-      slotCard.dataset.slot = slot;
-
-      var namesMarkup = '<p class="empty-msg">No signups yet</p>';
+      card.className = 'slot-card' + (hasSignups ? ' has-signups' : '') + (isSelected ? ' drag-selected' : '');
+      
+      var namesHtml = '';
       if (hasSignups) {
-        namesMarkup = '<ul class="names-list">' + users.map(function(name, idx) {
-          var isSelf = activeUser && (name.toLowerCase() === activeUser.toLowerCase());
-          var showRemoveBtn = isSelf || isAdminMode || isUltraAdminMode;
-          
-          var badgeClass = 'name-badge' + (isSelf ? ' own-badge' : '');
-          var removeBtnHtml = showRemoveBtn 
-            ? ' <span class="remove-btn" data-slot="' + slot + '" data-name="' + escapeHtml(name) + '" title="Remove ' + escapeHtml(name) + '">&times;</span>' 
-            : '';
-
-          return '<li class="' + badgeClass + '">' + escapeHtml(name) + removeBtnHtml + '</li>';
+        namesHtml = '<ul class="names-list">' + slotData.map(function(item) {
+          var isOwn = (item.name === getActiveUser());
+          return '<li class="name-badge' + (isOwn ? ' own-badge' : '') + '">' +
+                 escapeHtml(item.name) +
+                 (isOwn ? ' <span class="remove-btn" title="Remove">&times;</span>' : '') +
+                 '</li>';
         }).join('') + '</ul>';
-      }
-
-      slotCard.innerHTML = '<div class="slot-header">' +
-                             '<span>' + slot + '</span>' +
-                             '<span class="slot-count-badge">' + users.length + '/' + maxCap + '</span>' +
-                           '</div>' + namesMarkup;
-
-      slotCard.onmousedown = function(e) {
-        if (e.target.classList.contains('remove-btn')) return;
-
-        if (isGuest) {
-          openRegistrationModal(slot);
-          return;
-        }
-
-        if (isSystemLocked && !isAdminMode && !isUltraAdminMode) {
-          alert("Schedule is currently locked by Ultra-Admin.");
-          return;
-        }
-
-        e.preventDefault();
-        isMouseDown = true;
-        toggleSlot(slot, isFull);
-      };
-
-      slotCard.onmouseenter = function() {
-        if (!isGuest && isMouseDown && (!isFull || isAdminMode || isUltraAdminMode)) {
-          selectedSlots.add(slot);
-          updateHighlights();
-        }
-      };
-
-      containerEl.appendChild(slotCard);
-    });
-
-    document.querySelectorAll('.remove-btn').forEach(function(btn) {
-      btn.onclick = async function(e) {
-        e.stopPropagation();
-        await removeUserFromServer(selectedDateKey, btn.dataset.slot, btn.dataset.name);
-        renderSlots();
-      };
-    });
-  }
-
-  function toggleSlot(slot, isFull) {
-    if (isFull && !isAdminMode && !isUltraAdminMode) return;
-    if (selectedSlots.has(slot)) {
-      selectedSlots.delete(slot);
-    } else {
-      selectedSlots.add(slot);
-    }
-    updateHighlights();
-  }
-
-  function updateHighlights() {
-    document.querySelectorAll('.slot-card').forEach(function(card) {
-      var slot = card.dataset.slot;
-      if (selectedSlots.has(slot)) {
-        card.classList.add('drag-selected');
       } else {
-        card.classList.remove('drag-selected');
+        namesHtml = '<span class="empty-msg">No sign-ups yet</span>';
       }
+
+      card.innerHTML = '<div class="slot-header"><span>' + slot + '</span>' +
+                       '<span class="slot-count-badge">' + slotData.length + ' players</span></div>' +
+                       namesHtml;
+
+      card.onclick = function(e) {
+        if (!getActiveUser()) {
+          document.getElementById('registration-modal').style.display = 'flex';
+          document.getElementById('register-name-input').focus();
+          return;
+        }
+
+        // Handle remove button click
+        if (e.target.classList.contains('remove-btn')) {
+          e.stopPropagation();
+          removeSignup(selectedDateKey, slot);
+          return;
+        }
+
+        if (selectedSlots.has(slot)) {
+          selectedSlots.delete(slot);
+          card.classList.remove('drag-selected');
+        } else {
+          selectedSlots.add(slot);
+          card.classList.add('drag-selected');
+        }
+      };
+
+      containerEl.appendChild(card);
     });
+  }
+
+  async function removeSignup(dateKey, slot) {
+    try {
+      await fetch('/api/signups', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ dateKey: dateKey, slot: slot, name: getActiveUser() })
+      });
+      await fetchServerData();
+      renderSlots();
+    } catch(e) {
+      alert("Failed to remove signup.");
+    }
   }
 
   function setupEvents() {
-    document.getElementById('auth-action-btn').onclick = function() {
-      var activeUser = getActiveUser();
-      if (activeUser) {
-        logoutUser();
-      } else {
-        openRegistrationModal();
-      }
-    };
-
-    document.getElementById('accept-cookies-btn').onclick = handleRegistrationSubmit;
-    document.getElementById('decline-cookies-btn').onclick = closeRegistrationModal;
-    document.getElementById('register-name-input').onkeydown = function(e) {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        handleRegistrationSubmit();
-      }
-    };
-
-    var keyBuffer = "";
-    window.onkeydown = function(e) {
-      if (e.key && e.key.length === 1) {
-        keyBuffer += e.key.toUpperCase();
-        if (keyBuffer.length > 10) keyBuffer = keyBuffer.slice(-10);
-        if (keyBuffer.indexOf(SECRET) !== -1) {
-          openTerminal();
-          keyBuffer = "";
+    var authBtn = document.getElementById('auth-action-btn');
+    authBtn.onclick = function() {
+      if (getActiveUser()) {
+        if (confirm("Log out?")) {
+          eraseActiveUser();
+          selectedSlots.clear();
+          renderUserProfileBar();
+          renderSlots();
         }
-      }
-    };
-
-    var titleClicks = 0, titleTimer;
-    document.getElementById('page-title').onclick = function() {
-      titleClicks++;
-      clearTimeout(titleTimer);
-      if (titleClicks >= 5) {
-        openTerminal();
-        titleClicks = 0;
       } else {
-        titleTimer = setTimeout(function() { titleClicks = 0; }, 1500);
+        document.getElementById('registration-modal').style.display = 'flex';
+        document.getElementById('register-name-input').focus();
       }
     };
 
-    var ultraClicks = 0, ultraTimer;
-    document.getElementById('ultra-trigger').onclick = function() {
-      ultraClicks++;
-      clearTimeout(ultraTimer);
-      if (ultraClicks >= 5) {
-        closeTerminal();
-        openUltraTerminal();
-        ultraClicks = 0;
-      } else {
-        ultraTimer = setTimeout(function() { ultraClicks = 0; }, 1500);
-      }
-    };
-
-    document.getElementById('close-modal').onclick = closeTerminal;
-    document.getElementById('auth-btn').onclick = verifyAuth;
-    document.getElementById('secret-input').onkeydown = function(e) {
-      if (e.key === 'Enter') verifyAuth();
-    };
-
-    document.getElementById('ultra-close-modal').onclick = closeUltraTerminal;
-    document.getElementById('ultra-auth-btn').onclick = verifyUltraAuth;
-    document.getElementById('ultra-secret-input').onkeydown = function(e) {
-      if (e.key === 'Enter') verifyUltraAuth();
-    };
-
-    document.getElementById('exit-admin').onclick = function() {
-      isAdminMode = false;
-      isUltraAdminMode = false;
-      var indicator = document.getElementById('admin-indicator');
-      indicator.style.display = 'none';
-      indicator.classList.remove('ultra-theme');
-      
-      document.getElementById('auth-section').style.display = 'block';
-      document.getElementById('admin-panel').style.display = 'none';
-      document.getElementById('ultra-auth-section').style.display = 'block';
-      document.getElementById('ultra-admin-panel').style.display = 'none';
-      renderSlots();
-    };
-
-    document.getElementById('clear-day-btn').onclick = async function() {
-      if (confirm('Clear signups for selected date?')) {
-        await fetch('/api/signups/day', {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ dateKey: selectedDateKey })
-        });
-        await fetchServerData();
+    document.getElementById('accept-cookies-btn').onclick = function() {
+      var nameInput = document.getElementById('register-name-input');
+      var name = nameInput.value.trim();
+      if (name) {
+        setActiveUser(name);
+        document.getElementById('registration-modal').style.display = 'none';
+        renderUserProfileBar();
         renderSlots();
-        closeTerminal();
-      }
-    };
-
-    document.getElementById('ultra-reset-all-btn').onclick = async function() {
-      if (confirm('PURGE ALL SYSTEM DATA? This cannot be undone!')) {
-        await fetch('/api/signups/all', { method: 'DELETE' });
-        await fetchServerData();
-        renderSlots();
-        closeUltraTerminal();
-      }
-    };
-
-    document.getElementById('ultra-toggle-lock-btn').onclick = function() {
-      isSystemLocked = !isSystemLocked;
-      var statusText = document.getElementById('lock-status-text');
-      var submitBtn = document.getElementById('submit-btn');
-
-      if (isSystemLocked) {
-        statusText.textContent = "Status: LOCKED (Signups Disabled)";
-        statusText.style.color = "#f43f5e";
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.5";
-        submitBtn.style.cursor = "not-allowed";
       } else {
-        statusText.textContent = "Status: Normal (Unlocked)";
-        statusText.style.color = "#f0abfc";
-        if (getActiveUser()) submitBtn.disabled = false;
-        submitBtn.style.opacity = "1";
-        submitBtn.style.cursor = "pointer";
+        alert("Please enter your name.");
       }
     };
 
-    window.onmouseup = function() { isMouseDown = false; };
+    document.getElementById('decline-cookies-btn').onclick = function() {
+      document.getElementById('registration-modal').style.display = 'none';
+    };
 
     document.getElementById('signup-form').onsubmit = async function(e) {
       e.preventDefault();
-      if (isSystemLocked) {
-        alert("Signups are currently locked by the administrator.");
+      var user = getActiveUser();
+      if (!user) {
+        alert("Please sign in first.");
         return;
       }
-
-      var name = getActiveUser();
-      if (!name) {
-        openRegistrationModal();
+      if (selectedSlots.size === 0) {
+        alert("Please select at least one time slot.");
         return;
       }
-
-      if (selectedSlots.size === 0) return;
 
       var slotsArray = Array.from(selectedSlots);
-      await saveSlotsToServer(selectedDateKey, slotsArray, name);
-
-      selectedSlots.clear();
-      renderSlots();
+      try {
+        var res = await fetch('/api/signups', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ dateKey: selectedDateKey, slots: slotsArray, name: user })
+        });
+        if (res.ok) {
+          selectedSlots.clear();
+          await fetchServerData();
+          renderSlots();
+        } else {
+          alert("Error saving sign up.");
+        }
+      } catch(err) {
+        alert("Network error.");
+      }
     };
   }
 
-  function openTerminal() {
-    document.getElementById('admin-modal').style.display = 'flex';
-    document.getElementById('secret-input').focus();
-  }
-
-  function closeTerminal() {
-    document.getElementById('admin-modal').style.display = 'none';
-    document.getElementById('secret-input').value = '';
-    document.getElementById('auth-error').style.display = 'none';
-  }
-
-  function openUltraTerminal() {
-    document.getElementById('ultra-admin-modal').style.display = 'flex';
-    document.getElementById('ultra-secret-input').focus();
-  }
-
-  function closeUltraTerminal() {
-    document.getElementById('ultra-admin-modal').style.display = 'none';
-    document.getElementById('ultra-secret-input').value = '';
-    document.getElementById('ultra-auth-error').style.display = 'none';
-  }
-
-  function verifyAuth() {
-    var val = document.getElementById('secret-input').value.trim().toUpperCase();
-    if (val === SECRET) {
-      isAdminMode = true;
-      document.getElementById('auth-section').style.display = 'none';
-      document.getElementById('admin-panel').style.display = 'flex';
-      
-      var indicator = document.getElementById('admin-indicator');
-      indicator.style.display = 'flex';
-      document.getElementById('admin-indicator-label').textContent = '[ROOT ADMIN ACCESS ACTIVE]';
-      
-      renderSlots();
-    } else {
-      document.getElementById('auth-error').style.display = 'block';
-    }
-  }
-
-  function verifyUltraAuth() {
-    var val = document.getElementById('ultra-secret-input').value.trim().toUpperCase();
-    if (val === ULTRA_SECRET) {
-      isUltraAdminMode = true;
-      document.getElementById('ultra-auth-section').style.display = 'none';
-      document.getElementById('ultra-admin-panel').style.display = 'flex';
-      
-      var indicator = document.getElementById('admin-indicator');
-      indicator.style.display = 'flex';
-      indicator.classList.add('ultra-theme');
-      document.getElementById('admin-indicator-label').textContent = '[ULTRA-ADMIN OMNI KERNEL ACTIVE]';
-      
-      renderSlots();
-    } else {
-      document.getElementById('ultra-auth-error').style.display = 'block';
-    }
-  }
-
   function escapeHtml(str) {
-    return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  window.onload = init;
 })();
 </script>
-
 </body>
+</html>
 </html>
